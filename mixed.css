@@ -1,0 +1,57 @@
+/* heart section */
+
+body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0b1522;
+}
+
+.heart{
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    position: relative;
+    transform:rotate(-45deg);
+    box-shadow: -10px 10px 90px #f20044 ;
+    animation: heart 0.6s linear infinite;
+}
+@keyframes heart{
+    0%{
+        transform: rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1.08);
+    }
+}
+.heart::before{
+    content:'';
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    position:absolute;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #f20044 ;
+
+}
+.heart::after{
+    content:'';
+    height: 70px;
+    width: 70px;
+    background-color: #f20044;
+    position:absolute;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #f20044 ;
+
+}
+
+
+/* svg circle bar*/
